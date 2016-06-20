@@ -1,13 +1,13 @@
 #!/usr/bin/python
 
 import MySQLdb
-
+#start and end time
 start_time='2016-02-16x 00:00:00'
 end_time='2016-02-18 23:59:59'
 
 sum=0
 count=[]
-
+#query
 sql="SELECT count(*),BLACKLIST_DOUBTFUL from blacklist_logs where DATE_AND_HOUR >= %s AND DATE_AND_HOUR <=%s group by BLACKLIST_DOUBTFUL"
 
 try:
